@@ -3,3 +3,5 @@ server:
 spring:
   application:
     name: consumerorder #应用名称别名
+user:
+  url: http://localhost:7900/user/
