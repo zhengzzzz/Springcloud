@@ -1,0 +1,5 @@
+server:
+  port: 8900 #程序启动后的端口
+spring:
+  application:
+    name: consumerorder #应用名称别名

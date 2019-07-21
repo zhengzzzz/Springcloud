@@ -1,4 +1,4 @@
-package com.qianfeng.springcloud.pojo;
+package com.qianfeng.pojo;
 
 import java.util.Date;
 
