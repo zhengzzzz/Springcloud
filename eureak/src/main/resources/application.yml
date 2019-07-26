@@ -1,19 +1,11 @@
 server:
-  port: 10000
-    #因为eureak当前是淡季的所以我们需要做一些配置
+  port: 8888
 eureka:
+  instance:
+    hostname: localhost
   client:
-    register-with-eureka: false
-    fetch-registry: false
+    registerWithEureka: false
+    fetchRegistry: false
     serviceUrl:
-      #defaultZone: http://localhost:10000/eurwka
-      defaultZone: http://user:123@localhost:10000/eurwka
-# 安全认证的配置      defaultZone: http://user:123@localhost:10000/eurwka
-
-security:
-  basic:
-    enabled: true
-  user:
-    name: user  # 用户名
-    password: 123   # 用户密码
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
 

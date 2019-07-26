@@ -1,13 +1,14 @@
 server:
-  port: 7900 #程序启动后的端口
+  port: 7070
 spring:
   application:
-    name: provideruser #应用名称别名
-  eureka:
-    client:
-      register-with-eureka: false
-      fetch-registry: false
-      serviceUrl:
-        #defaultZone: http://localhost:10000/eurwka
-        defaultZone: http://user:123@localhost:10000/eurwka
-  # 安全认证的配置      defaultZone: http://user:123@localhost:10000/eurwka
+    name: client-a
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8888/eureka/
+  instance:
+    prefer-ip-address: true
+management:
+  security:
+    enabled: false

@@ -13,7 +13,7 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 public class provideruser {
     public static void main(String[] args) {
 
-        SpringApplication.run(provideruser.class, args);
+        SpringApplication.run(provideruser.class);
         System.out.println("Hello World!");
     }
 }
